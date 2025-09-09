@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/invoices;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+
+app:
+  file-storage:
+    base-path: ./uploads
+  jwt:
+    secret: changeitpleasechangechangeitpleasechangeit
+    validity-ms: 3600000
+
+logging:
+  level:
+    root: INFO
+    org.hibernate.SQL: INFO
